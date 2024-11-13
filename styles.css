@@ -1,0 +1,153 @@
+/* General */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #121212;
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  padding: 3rem 1rem;
+  border-bottom: 1px solid #333;
+}
+
+.profile-picture {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #00bcd4;
+}
+
+.profile-picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  color: #00bcd4;
+  margin-top: 1rem;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #8d8d8d;
+}
+
+/* Navbar */
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  background: #222;
+  padding: 1rem 0;
+}
+
+.nav-menu li {
+  list-style: none;
+  margin: 0 1.5rem;
+}
+
+.nav-menu a {
+  color: #00bcd4;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+  color: #e91e63;
+}
+
+/* Section */
+.section {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #1e1e1e;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 188, 212, 0.2);
+  animation: fadeInUp 1s ease-in-out;
+}
+
+/* Headings */
+h2 {
+  color: #00bcd4;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+/* Skills Grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  text-align: center;
+}
+
+.skill {
+  padding: 1rem;
+  background-color: #333;
+  color: #00bcd4;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.skill:hover {
+  background-color: #e91e63;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #222;
+  color: #8d8d8d;
+  font-size: 0.9rem;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Interaction Message */
+.message {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: #e0e0e0;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  opacity: 0;
+  animation: fadeInOut 2s ease;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { opacity: 0; }
+}
