@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+/* Estilos para el efecto Matrix */
 #matrix-canvas {
     position: fixed;
     top: 0;
@@ -20,9 +21,9 @@ body {
     color: #e0e0e0;
     line-height: 1.6;
     position: relative;
-    min-height: 100vh;
 }
 
+/* Header */
 .header {
     text-align: center;
     padding: 4rem 1rem;
@@ -30,7 +31,6 @@ body {
     border-bottom: 2px solid rgba(0, 255, 153, 0.3);
     position: relative;
     backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
 }
 
 .profile-picture {
@@ -67,26 +67,24 @@ header p {
     color: #8d8d8d;
 }
 
+/* Navbar */
 .nav-menu {
-    background: rgba(17, 17, 17, 0.95);
+    background: rgba(17, 17, 17, 0.9);
     padding: 1rem 0;
     backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
     position: sticky;
     top: 0;
     z-index: 100;
-    border-bottom: 1px solid rgba(0, 255, 153, 0.2);
 }
 
 .nav-menu ul {
     display: flex;
     justify-content: center;
     list-style: none;
-    flex-wrap: wrap;
 }
 
 .nav-menu li {
-    margin: 0.5rem 1.5rem;
+    margin: 0 1.5rem;
 }
 
 .nav-menu a {
@@ -96,28 +94,25 @@ header p {
     transition: all 0.3s ease;
     padding: 0.5rem 1rem;
     border-radius: 4px;
-    display: inline-block;
 }
 
 .nav-menu a:hover {
     color: #fff;
     background: rgba(0, 255, 153, 0.2);
     box-shadow: 0 0 15px rgba(0, 255, 153, 0.3);
-    transform: translateY(-2px);
 }
 
+/* Sections */
 .section {
     max-width: 800px;
     margin: 2rem auto;
     padding: 2rem;
-    background: rgba(30, 30, 30, 0.9);
+    background: rgba(30, 30, 30, 0.8);
     border-radius: 12px;
     box-shadow: 0 8px 32px rgba(0, 255, 153, 0.2);
     backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(0, 255, 153, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    animation: fadeInUp 0.5s ease-out;
 }
 
 .section:hover {
@@ -125,6 +120,7 @@ header p {
     box-shadow: 0 12px 48px rgba(0, 255, 153, 0.3);
 }
 
+/* Headings */
 h2 {
     color: #00ff99;
     margin-bottom: 1.5rem;
@@ -133,6 +129,7 @@ h2 {
     text-shadow: 0 0 10px rgba(0, 255, 153, 0.5);
 }
 
+/* Skills Grid */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -150,7 +147,6 @@ h2 {
     cursor: pointer;
     border: 2px solid rgba(0, 255, 153, 0.2);
     backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
     text-align: center;
 }
 
@@ -161,48 +157,46 @@ h2 {
     border-color: rgba(0, 255, 153, 0.5);
 }
 
+/* Contact Links */
 #contact a {
     color: #00ff99;
     text-decoration: none;
     transition: all 0.3s ease;
-    padding: 0.2rem 0.5rem;
-    border-radius: 4px;
 }
 
 #contact a:hover {
     color: #fff;
-    background: rgba(0, 255, 153, 0.1);
     text-shadow: 0 0 10px rgba(0, 255, 153, 0.8);
 }
 
+/* Footer */
 footer {
     text-align: center;
     padding: 1.5rem;
-    background: rgba(17, 17, 17, 0.95);
+    background: rgba(17, 17, 17, 0.9);
     color: #8d8d8d;
     backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
     border-top: 1px solid rgba(0, 255, 153, 0.1);
-    margin-top: 2rem;
 }
 
+/* Message Popup */
 .message {
     position: fixed;
     bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
-    background: rgba(51, 51, 51, 0.95);
+    background: rgba(51, 51, 51, 0.9);
     color: #00ff99;
     padding: 15px 30px;
     border-radius: 8px;
     font-weight: bold;
     box-shadow: 0 0 20px rgba(0, 255, 153, 0.3);
     backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(0, 255, 153, 0.2);
     z-index: 1000;
 }
 
+/* Animations */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -221,6 +215,7 @@ footer {
     100% { opacity: 0; transform: translateY(-20px); }
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
     .header {
         padding: 2rem 1rem;
@@ -238,13 +233,6 @@ footer {
 
     .nav-menu li {
         margin: 0.5rem 0;
-        width: 100%;
-        text-align: center;
-    }
-
-    .nav-menu a {
-        display: block;
-        padding: 0.8rem;
     }
 
     .section {
@@ -256,13 +244,4 @@ footer {
         grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
         gap: 1rem;
     }
-
-    header h1 {
-        font-size: 1.8rem;
-    }
-
-    header p {
-        font-size: 1rem;
-    }
-}
 }
